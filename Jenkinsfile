@@ -19,16 +19,7 @@ pipeline {
 				sh "mvn test"
 			}
 		}
-		stage('---package---'){
-			tools {
-				maven 'maven_3.8.5'
-			}
-			
-			steps {
-				sh 'mvn --version'
-				sh "mvn package"
-			}
-		}
+		
 	}
 	post {
 		success {
